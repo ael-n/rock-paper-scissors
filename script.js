@@ -20,5 +20,14 @@ function playerScore () {
     let computerScore = 0;
 }
 
+function playRound () {
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
 
         
