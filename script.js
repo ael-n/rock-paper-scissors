@@ -28,10 +28,18 @@ function playRound (humanChoice, computerChoice) {
         console.log("")
     }
 
-    if (humanChoice = "Rock" && computerChoice = "Scissors" ||
-        
-    )
+    if (
+        (humanChoice === "Rock" && computerChoice === "Scissors") ||
+        (humanChoice === "Paper" && computerChoice === "Rock") ||
+        (humanChoice === "Scissors" && computerChoice === "Paper")
+    ) {
+        humanChoice++;
+        console.log(`You win! ${capitalizeFirstLetter(humanChoice)} beat ${computerChoice}`)
+    }
 
+    if  (
+        (humanChoice === computerChoice)
+    )
 }
 
 const humanSelection = getHumanChoice();
