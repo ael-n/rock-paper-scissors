@@ -20,7 +20,17 @@ function playerScore () {
     let computerScore = 0;
 }
 
-function playRound () {
+function playRound (humanChoice, computerChoice) {
+    const humanChoice = humanChoice.toLowerCase();
+    const computerChoice = computerChoice.toLowerCaseCase();
+
+    if (humanChoice === computerChoice) {
+        console.log("")
+    }
+
+    if (humanChoice = "Rock" && computerChoice = "Scissors" ||
+        
+    )
 
 }
 
