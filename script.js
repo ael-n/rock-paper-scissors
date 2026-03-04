@@ -15,37 +15,38 @@ function getHumanChoice () {
     return choice;
 }
 
-function playerScore () {
-    let humanScore = 0;
-    let computerScore = 0;
-}
-
 function playRound (humanChoice, computerChoice) {
-    const humanChoice = humanChoice.toLowerCase();
-    const computerChoice = computerChoice.toLowerCaseCase();
+    const normalisedHumanChoice = humanChoice.toLowerCase();
 
-    if (humanChoice === computerChoice) {
-        console.log("")
+    if (normalisedHumanChoice === computerChoice) {
+        console.log(`It's a tie, both choose ${humanChoice}`)
+        return 0;
     }
 
-    if (
-        (humanChoice === "Rock" && computerChoice === "Scissors") ||
-        (humanChoice === "Paper" && computerChoice === "Rock") ||
-        (humanChoice === "Scissors" && computerChoice === "Paper")
-    ) {
+    else if (
+        (normalisedHumanChoice === "rock" && computerChoice === "scissors") ||
+        (normalisedHumanChoice === "paper" && computerChoice === "rock") ||
+        (normalisedHumanChoice === "scissors" && computerChoice === "paper")
+    ) { 
         humanChoice++;
-        console.log(`You win! ${capitalizeFirstLetter(humanChoice)} beat ${computerChoice}`)
+        console.log(`You win! ${normalisedHumanChoice} beat ${computerChoice}`)
+        return 1;
     }
 
-    if  (
-        (humanChoice === computerChoice)
-    )
+    else  {
+        computerChoice++;
+        console.log(`You loose ${computerChoice} beat ${normalisedHumanChoice}`)
+        return -1;
+    }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+playGame(humanSelection, computerSelection) {
+
+    for( let i=0; i < 5; i++)
+}
 
 
         
