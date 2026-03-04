@@ -45,8 +45,26 @@ const computerChoice = getComputerChoice();
 
 playGame(humanSelection, computerSelection) {
 
-    for( let i=0; i < 5; i++)
-}
+    for( let i=0; i < 5; i++) {
+        console.log(`\n--- Round ${i + 1} ---`);
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+    }
 
+    if (humanChoice === null) {
+            console.log("Game cancelled!");
+            break;
+    }
+
+    console.log("\n=== GAME OVER ===");
+    console.log(`Final Score: You ${humanScore} - ${computerScore} Computer`);
+    if (humanScore > computerScore) {
+        console.log("🎉 Congratulations! You won the game!");
+    } else if (computerScore > humanScore) {
+        console.log("💻 Computer wins! Better luck next time!");
+    } else {
+        console.log("🤝 It's a tie game!");
+    }
+}
 
         
