@@ -47,17 +47,20 @@ function playRound (humanChoice, computerChoice) {
 //const computerChoice = getComputerChoice();
 
 function playGame(humanSelection, computerSelection) {
-
     for( let i=0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
+
         const humanChoice = getHumanChoice();
+
+         if (humanChoice === null) {
+        console.log("Game cancelled!");
+        break;
+        }
+
         const computerChoice = getComputerChoice();
     }
 
-    if (humanChoice === null) {
-        console.log("Game cancelled!");
-        break;
-    }
+   
 
     console.log("\n=== GAME OVER ===");
     console.log(`Final Score: You ${humanScore} - ${computerScore} Computer`);
