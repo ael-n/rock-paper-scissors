@@ -31,13 +31,13 @@ function playRound (humanChoice, computerChoice) {
         (normalisedHumanChoice === "paper" && computerChoice === "rock") ||
         (normalisedHumanChoice === "scissors" && computerChoice === "paper")
     ) { 
-        humanChoice++;
+        humanScore++;
         console.log(`You win! ${normalisedHumanChoice} beats ${computerChoice}`)
         return 1;
     }
 
     else  {
-        computerChoice++;
+        computerScore++;
         console.log(`You loose ${computerChoice} beats ${normalisedHumanChoice}`)
         return -1;
     }
