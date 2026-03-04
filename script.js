@@ -73,4 +73,5 @@ function playGame(humanSelection, computerSelection) {
     }
 }
 
+playGame();
         
