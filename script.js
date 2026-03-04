@@ -43,7 +43,7 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-function playGame(humanSelection, computerSelection) {
+function playGame() {
     for( let i=0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
 
