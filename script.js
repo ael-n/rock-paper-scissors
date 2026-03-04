@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice () {
     const randomNumber = Math.random()
 
@@ -18,52 +15,49 @@ function getHumanChoice () {
     return choice;
 }
 
-function playRound (humanChoice, computerChoice) {
-    const normalisedHumanChoice = humanChoice.toLowerCase();
-
-    if (normalisedHumanChoice === computerChoice) {
-        console.log(`It's a tie, both choose ${humanChoice}`)
-        return 0;
-    }
-
-    else if (
-        (normalisedHumanChoice === "rock" && computerChoice === "scissors") ||
-        (normalisedHumanChoice === "paper" && computerChoice === "rock") ||
-        (normalisedHumanChoice === "scissors" && computerChoice === "paper")
-    ) { 
-        humanScore++;
-        console.log(`You win! ${normalisedHumanChoice} beats ${computerChoice}`)
-        return 1;
-    }
-
-    else  {
-        computerScore++;
-        console.log(`You loose ${computerChoice} beats ${normalisedHumanChoice}`)
-        return -1;
-    }
-}
-
 function playGame() {
-    for( let i=0; i < 5; i++) {
-        console.log(`\n--- Round ${i + 1} ---`);
-
-        const humanChoice = getHumanChoice();
-
-         if (humanChoice === null) {
-        console.log("Game cancelled!");
-        break;
-        }
-
-        const computerChoice = getComputerChoice();
+    
+    let humanScore = 0;
+    let computerScore = 0;
+    
+    function playRound(humanChoice, computerChoice) {
+        const normalisedHumanChoice = humanChoice.toLowerCase();
         
+        if (normalisedHumanChoice === computerChoice) {
+            console.log(`It's a tie, both choose ${humanChoice}`);
+            return 0;
+        } else if (
+            (normalisedHumanChoice === "rock" && computerChoice === "scissors") ||
+            (normalisedHumanChoice === "paper" && computerChoice === "rock") ||
+            (normalisedHumanChoice === "scissors" && computerChoice === "paper")
+        ) {
+            humanScore++;
+            console.log(`You win! ${normalisedHumanChoice} beats ${computerChoice}`);
+            return 1;
+        } else {
+            computerScore++;
+            console.log(`You lose! ${computerChoice} beats ${normalisedHumanChoice}`);
+            return -1;
+        }
+    }
+    
+    for (let i = 0; i < 5; i++) {
+        console.log(`\n--- Round ${i + 1} ---`);
+        
+        const humanChoice = getHumanChoice();
+        if (humanChoice === null) {
+            console.log("Game cancelled!");
+            break;
+        }
+        
+        const computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
         console.log(`Current Score: You ${humanScore} - ${computerScore} Computer`);
     }
-
-   
-
+    
     console.log("\n=== GAME OVER ===");
     console.log(`Final Score: You ${humanScore} - ${computerScore} Computer`);
+    
     if (humanScore > computerScore) {
         console.log("🎉 Congratulations! You won the game!");
     } else if (computerScore > humanScore) {
@@ -74,4 +68,3 @@ function playGame() {
 }
 
 playGame();
-        
