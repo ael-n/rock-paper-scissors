@@ -43,9 +43,6 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-//const humanChoice = getHumanChoice(); 
-//const computerChoice = getComputerChoice();
-
 function playGame(humanSelection, computerSelection) {
     for( let i=0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
@@ -58,6 +55,9 @@ function playGame(humanSelection, computerSelection) {
         }
 
         const computerChoice = getComputerChoice();
+        
+        playRound(humanChoice, computerChoice);
+        console.log(`Current Score: You ${humanScore} - ${computerScore} Computer`);
     }
 
    
