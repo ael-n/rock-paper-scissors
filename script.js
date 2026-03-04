@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice () {
     const randomNumber = Math.random()
 
@@ -14,9 +17,6 @@ function getHumanChoice () {
     const choice = prompt("Enter Rock, Paper or Scissors!")
     return choice;
 }
-
-let humanScore = 0;
-let computerScore = 0;
 
 function playRound (humanChoice, computerChoice) {
     const normalisedHumanChoice = humanChoice.toLowerCase();
