@@ -43,8 +43,8 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
+//const humanChoice = getHumanChoice(); 
+//2`const computerChoice = getComputerChoice();
 
 function playGame(humanSelection, computerSelection) {
 
@@ -55,8 +55,8 @@ function playGame(humanSelection, computerSelection) {
     }
 
     if (humanChoice === null) {
-            console.log("Game cancelled!");
-            break;
+        console.log("Game cancelled!");
+        break;
     }
 
     console.log("\n=== GAME OVER ===");
