@@ -40,8 +40,10 @@ function playGame() {
             return -1;
         }
     }
+
     
-    for (let i = 0; i < 5; i++) {
+    
+   /* for (let i = 0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
         
         const humanChoice = getHumanChoice();
@@ -53,7 +55,7 @@ function playGame() {
         const computerChoice = getComputerChoice();
         playRound(humanChoice, computerChoice);
         console.log(`Current Score: You ${humanScore} - ${computerScore} Computer`);
-    }
+    }*/
     
     console.log("\n=== GAME OVER ===");
     console.log(`Final Score: You ${humanScore} - ${computerScore} Computer`);
