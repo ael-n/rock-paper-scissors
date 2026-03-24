@@ -41,7 +41,14 @@ function playGame() {
         }
     }
 
-    
+    const rockBtn = document.querySelector("#rock");
+    const paperBtn = document.querySelector("#paper");
+    const scissorsBtn = document.querySelector("#scissors")
+
+    rockBtn.addEventListener("click", () => 
+    { 
+        playRound("rock");
+    });
     
    /* for (let i = 0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
