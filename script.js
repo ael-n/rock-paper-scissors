@@ -53,6 +53,10 @@ function playGame() {
         playGame("paper");
     });
 
+    scissorsBtn.addEventListener("click", () => {
+        playRound("scissors");
+    });
+
     
    /* for (let i = 0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
