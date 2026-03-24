@@ -45,10 +45,14 @@ function playGame() {
     const paperBtn = document.querySelector("#paper");
     const scissorsBtn = document.querySelector("#scissors")
 
-    rockBtn.addEventListener("click", () => 
-    { 
+    rockBtn.addEventListener("click", () => { 
         playRound("rock");
     });
+
+    paperBtn.addEventListener("click", () => {
+        playGame("paper");
+    });
+
     
    /* for (let i = 0; i < 5; i++) {
         console.log(`\n--- Round ${i + 1} ---`);
