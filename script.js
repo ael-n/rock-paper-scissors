@@ -50,7 +50,7 @@ function playGame() {
     });
 
     paperBtn.addEventListener("click", () => {
-        playGame("paper");
+        playRound("paper");
     });
 
     scissorsBtn.addEventListener("click", () => {
